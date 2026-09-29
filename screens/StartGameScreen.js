@@ -1,10 +1,10 @@
-import { Button, Text, TextInput, View } from "react-native";
+import { Button, Text, TextInput, View, StyleSheet } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 const StartGameScreen = () => {
   return (
-    <View style={{ backgroundColor: "green" }}>
-      <TextInput style={{ backgroundColor: "red" }} placeholder="hello" />
+    <View style={styles.inputContainer}>
+      <TextInput placeholder="hello" />
 
       <PrimaryButton>Reset</PrimaryButton>
       <PrimaryButton>Confirm</PrimaryButton>
@@ -13,3 +13,19 @@ const StartGameScreen = () => {
 };
 
 export default StartGameScreen;
+
+const styles = StyleSheet.create({
+  inputContainer: {
+    marginTop: 100,
+    marginHorizontal: 24,
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: "#72063c",
+    elevation: 4, // shadow for Android
+    // shadow is for IOS
+    shadowColor: "black",
+    shadowOffset: { width: 2, height: 2 },
+    shadowRadius: 6,
+    shadowOpacity: 0.25,
+  },
+});
