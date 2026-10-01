@@ -6,15 +6,15 @@ import GameOverScreen from "./screens/GameOverScreen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.rootScreen}>
       <StartGameScreen />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  rootScreen: {
     flex: 1,
-    backgroundColor: "yellow",
+    backgroundColor: "#ddb52f",
   },
 });
