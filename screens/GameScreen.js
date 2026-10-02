@@ -4,6 +4,13 @@ const GameScreen = () => {
   return (
     <View>
       <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
+      <Text>GameScreen</Text>
     </View>
   );
 };
