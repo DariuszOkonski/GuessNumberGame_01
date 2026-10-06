@@ -21,7 +21,7 @@ const GameScreen = ({ userNumber }) => {
     <View style={styles.screen}>
       <Title>Opponent's Guess</Title>
 
-      <NumberContainer />
+      <NumberContainer>{currentGuess}</NumberContainer>
 
       <View>
         <Text>Higher or lower?</Text>
