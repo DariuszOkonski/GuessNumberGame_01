@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 const GameOverScreen = () => {
   return (
     <View>
-      <Text>GameOverScreen</Text>
+      <Text>Game is Over</Text>
     </View>
   );
 };
