@@ -4,18 +4,33 @@ import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/GameOverScreen";
 import { LinearGradient } from "expo-linear-gradient";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Colors from "./constants/colors";
 import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+
+SplashScreen.preventAutoHideAsync().catch((error) => {
+  console.warn("Failed to keep the splash screen visible:", error);
+});
 
 export default function App() {
   const [userNumber, setUserNumber] = useState(null);
   const [gameIsOver, setGameIsOver] = useState(false);
 
-  useFonts({
+  const [fontsLoaded] = useFonts({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   })
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync().catch((error) => {
+        console.warn("Failed to hide the splash screen:", error);
+      });
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
 
   function pickedNumberHandler(pickedNumber) {
     setUserNumber(pickedNumber);
