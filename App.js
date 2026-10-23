@@ -38,8 +38,9 @@ export default function App() {
     setGameIsOver(false);
   }
 
-  function gameOverHandler() {
+  function gameOverHandler(number) {
     setGameIsOver(true);
+    setGuessRounds(number);
   }
 
   function startNewGameHandler() {
