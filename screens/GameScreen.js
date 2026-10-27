@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     padding: 12,
     // backgroundColor: "yellow",
     paddingTop: 70,
+    alignItems: "center",
   },
   instructionText: {
     marginBottom: 12,
